@@ -67,8 +67,7 @@ Pass each level to unlock the next.
 ### 1. Clone and enter the repository
 
 ```bash
-git clone <your-repo-url>
-cd pennylane_game
+git clone <repo-url>
 ```
 
 ### 2. Create a virtual environment
@@ -104,7 +103,6 @@ pip install -r requirements.txt
 
 ## Running the Game
 
-From inside the `pennylane_game` directory:
 
 ```bash
 python main.py
