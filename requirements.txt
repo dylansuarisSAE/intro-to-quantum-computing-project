@@ -1,0 +1,5 @@
+# Quantum Gate Game (PennyLane + Quokka)
+requests>=2.28.0
+urllib3>=1.26.0
+pennylane>=0.38.0
+autoray==0.6.12
