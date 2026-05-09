@@ -170,7 +170,7 @@ Success: 100/100 shots are 1 (target |1>); P(|0>)=0.000, P(|1>)=1.000.
 | `menu` | Return to level select |
 | `quit` | Exit |
 
-## Project Structure
+## Current Project Structure
 
 ```
 pennylane_game/            <-- repo root
@@ -183,4 +183,28 @@ pennylane_game/            <-- repo root
 ├── cli.py                 # Interactive game loop, input parsing, help text
 ├── requirements.txt       # Python dependencies
 └── README.md
+```
+
+## Target Project Structure
+
+```
+quantum_pipelines/             <-- repo root
+├── backend/                   # FastAPI Game Engine & Quantum Layer
+│   ├── main.py                # FastAPI entry point
+│   ├── api/                   # REST API routers (endpoints)
+│   ├── core/                  # Game state and puzzle manager
+│   ├── quantum/               # PennyLane/Quokka logic (circuit.py, quokka.py)
+│   ├── models/                # Pydantic data structures
+│   ├── data/                  # Puzzle definitions (JSON files)
+│   ├── cli/                   # Preserved legacy CLI for debugging
+│   └── requirements.txt       # Backend dependencies
+├── frontend/                  # Lightweight Web UI (Vanilla JS/HTML)
+│   ├── index.html             # Main entry point
+│   ├── css/                   # Stylesheets
+│   └── js/                    # Application logic
+│       ├── api.js             # API client
+│       ├── builder.js         # Drag-and-drop circuit logic
+│       └── visualizer.js      # Client-side Bloch sphere rendering
+├── docs/                      # Architecture and Design Documents
+└── README.md                  # Project documentation
 ```
